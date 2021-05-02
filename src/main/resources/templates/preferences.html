@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org"
+	th:replace="~{fragments/layout :: layout (~{::body},'home')}">
+
+<body>
+
+	<h2 th:text="#{page.preference.title}">Preferences</h2>
+	<div class="row">
+		<div class="col-md-12">
+			<h3 th:text="#{preference.category.user}">User</h3>
+			<form>
+				<span th:text="#{preference.category.user.userid}">User Id :
+				</span> <input type="text" value="Jérome" />
+
+			</form>
+		</div>
+	</div>
+
+</body>
+
+</html>

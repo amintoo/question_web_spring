@@ -19,12 +19,29 @@ package fr.gamedev.question.web.system;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+/**
+ * Basic controller for all gameDev "student" UI.
+ *
+ * @author djer13
+ *
+ */
 @Controller
 class WelcomeController {
 
 	@GetMapping("/")
 	public String welcome() {
+		// recupére data dans le BDD
+		// alimenter le Model pour la Vue
+		// apeller un WS
 		return "welcome";
+	}
+
+	@GetMapping("/test")
+	public String test() {
+		// recupére data dans le BDD
+		// alimenter le Model pour la Vue
+		// apeller un WS
+		return "test";
 	}
 
 }

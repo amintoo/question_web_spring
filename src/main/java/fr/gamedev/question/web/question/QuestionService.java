@@ -53,23 +53,24 @@ public class QuestionService {
 
         if (QUESTION_1.equals(question.getQuestion())) {
             isCorrect = QUESTION_1_EXEPCTED_ANSWER.equals(question.getUserAnswer());
-            answer.setCorrect(isCorrect);
             if (isCorrect) {
                 answer.setEarnedPoint(11);
             }
         } else if (QUESTION_2.equals(question.getQuestion())) {
             isCorrect = QUESTION_2_EXEPCTED_ANSWER.equals(question.getUserAnswer());
-            answer.setCorrect(isCorrect);
             if (isCorrect) {
                 answer.setEarnedPoint(10);
             }
         } else if (QUESTION_3.equals(question.getQuestion())) {
             isCorrect = QUESTION_3_EXEPCTED_ANSWER.equals(question.getUserAnswer());
-            answer.setCorrect(isCorrect);
             if (isCorrect) {
                 answer.setEarnedPoint(42);
             }
+        } else {
+            isCorrect = Boolean.FALSE;
         }
+
+        answer.setCorrect(isCorrect);
 
         return answer;
     }

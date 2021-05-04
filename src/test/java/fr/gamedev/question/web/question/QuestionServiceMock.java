@@ -1,6 +1,3 @@
-/**
- *
- */
 package fr.gamedev.question.web.question;
 
 import java.util.ArrayList;
@@ -14,7 +11,7 @@ import org.springframework.stereotype.Service;
  *
  */
 @Service
-public class QuestionService {
+public class QuestionServiceMock implements QuestionService {
 
     private static final String QUESTION_1 = "Java est-il un bon language";
     private static final String QUESTION_1_EXEPCTED_ANSWER = "Oui";

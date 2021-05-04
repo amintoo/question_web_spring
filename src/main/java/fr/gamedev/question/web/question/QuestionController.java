@@ -21,7 +21,7 @@ public class QuestionController {
 
     @GetMapping("/question")
     public String showQuestion(Model model) {
-        model.addAttribute("question", questionService.getQuestion("Marvin"));
+        model.addAttribute("question", questionService.getQuestion("test0"));
         return "question";
     }
 

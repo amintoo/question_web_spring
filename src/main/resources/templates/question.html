@@ -15,6 +15,7 @@
 				
 				<input type="hidden" value="La réponse à la question
 				universelle est 42 ?" th:field="*{question}" />
+				<input type="hidden" value="52" th:field="*{questionId}" />
 				
 				<label th:text="#{question.form.choseAnswer}">Votre choix</label>
 				<div th:each="theAnswer : *{possibleAnswers}">

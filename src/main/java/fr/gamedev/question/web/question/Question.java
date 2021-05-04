@@ -8,52 +8,68 @@ import java.util.ArrayList;
  */
 public class Question {
 
-	private String question;
+    private long questionId;
 
-	private Iterable<String> possibleAnswers = new ArrayList<String>();
+    private String question;
 
-	private String userAnswer;
+    private Iterable<String> possibleAnswers = new ArrayList<String>();
 
-	/**
-	 * @return the question
-	 */
-	public String getQuestion() {
-		return question;
-	}
+    private String userAnswer;
 
-	/**
-	 * @param question the question to set
-	 */
-	public void setQuestion(String question) {
-		this.question = question;
-	}
+    /**
+     * @return the questionId
+     */
+    public long getQuestionId() {
+        return questionId;
+    }
 
-	/**
-	 * @return the possibleAnswers
-	 */
-	public Iterable<String> getPossibleAnswers() {
-		return possibleAnswers;
-	}
+    /**
+     * @param questionId the questionId to set
+     */
+    public void setQuestionId(long questionId) {
+        this.questionId = questionId;
+    }
 
-	/**
-	 * @param possibleAnswers the possibleAnswers to set
-	 */
-	public void setPossibleAnswers(Iterable<String> possibleAnswers) {
-		this.possibleAnswers = possibleAnswers;
-	}
+    /**
+     * @return the question
+     */
+    public String getQuestion() {
+        return question;
+    }
 
-	/**
-	 * @return the userAnswer
-	 */
-	public String getUserAnswer() {
-		return userAnswer;
-	}
+    /**
+     * @param question the question to set
+     */
+    public void setQuestion(String question) {
+        this.question = question;
+    }
 
-	/**
-	 * @param userAnswer the userAnswer to set
-	 */
-	public void setUserAnswer(String userAnswer) {
-		this.userAnswer = userAnswer;
-	}
+    /**
+     * @return the possibleAnswers
+     */
+    public Iterable<String> getPossibleAnswers() {
+        return possibleAnswers;
+    }
+
+    /**
+     * @param possibleAnswers the possibleAnswers to set
+     */
+    public void setPossibleAnswers(Iterable<String> possibleAnswers) {
+        this.possibleAnswers = possibleAnswers;
+    }
+
+    /**
+     * @return the userAnswer
+     */
+    public String getUserAnswer() {
+        return userAnswer;
+    }
+
+    /**
+     * @param userAnswer the userAnswer to set
+     */
+    public void setUserAnswer(String userAnswer) {
+        this.userAnswer = userAnswer;
+    }
 
 }

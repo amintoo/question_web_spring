@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org"
+	th:replace="~{fragments/layout :: layout (~{::body},'question')}">
+
+<body>
+
+	<h2 th:text="#{page.question.title}">Answer the question</h2>
+	<div class="row">
+		<div class="col-md-12">
+			
+			<form method="post" th:object="${question}" class="mt-5">
+			<div th:text=*{question}>La réponse à la question
+				universelle est 42 ?</div>
+				
+				<input type="hidden" value="La réponse à la question
+				universelle est 42 ?" th:field="*{question}" />
+				<input type="hidden" value="52" th:field="*{questionId}" />
+				
+				<label th:text="#{question.form.choseAnswer}">Votre choix</label>
+				<div th:each="theAnswer : *{possibleAnswers}">
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" th:field="*{userAnswer}"
+							th:value="${theAnswer}" class="custom-control-input"> 
+							<label
+							class="custom-control-label" th:for="${#ids.prev('userAnswer')}"
+							th:text="${theAnswer}">answer</label>
+					</div>
+				</div>
+				
+				<button class="btn btn-primary" type="submit" th:text="#{question.form.submit}">Submit form</button>
+
+			</form>
+		</div>
+	</div>
+
+</body>
+
+</html>
